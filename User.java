@@ -6,11 +6,10 @@ public abstract class User {
     protected String address;
     protected String email;
     protected String telephone;
-
-    abstract boolean login();
-    abstract boolean sendMessage(User user, String message);
-    abstract Doctor searchDoctor(List<Doctor> doctorList, String name);
-    abstract <T> List<Doctor> sortDoctors(List<Doctors> doctorsList, Comparator<T> comparator);
-    abstract Specialization searchSpecialization(String name);
-    abstract List<Doctor> filterDoctors(List<Doctor> doctorList, String criteria);
+    //abstract boolean login();
+    // abstract boolean sendMessage(User user, String message);
+    abstract List<Doctor> searchDoctor(List<Doctor> doctorsList, String name);
+    abstract List<Doctor> sortDoctors(List<Doctor> doctorsList, Comparator<Doctor> comparator);
+    abstract List<Specialization> searchSpecialization(List<Specialization> specializationList, String name);
+    abstract List<Doctor> filterDoctors(List<Doctor> doctorList, String criteria, String criteriaValue);
 }
